@@ -24,3 +24,87 @@
 # 2025-11-21 10:01:17.422205
 +add auto login farcaster and base app using preauth
 +
+
+# 2025-11-21 10:07:29.554373
++these 5 derivations will be built:
++/nix/store/a85wvfx6vlhf662cy67k7qmmn4rirs47-xnode-miniapp-template-1.0.0.drv
++/nix/store/vj32cx45c927xiwy2zbpbvjldhaik6sh-unit-xnode-miniapp-template.service.drv
++/nix/store/r1kacvyxp3cqypp2s65483f0jh2rwa2i-system-units.drv
++/nix/store/2n9aa0029rr33idy6051a2zwcj3wmcmz-etc.drv
++/nix/store/smrnnnb7wly45yhc9pfg229jcsway4ih-nixos-system-tapquest-25.11.20250921.554be64.drv
++building '/nix/store/a85wvfx6vlhf662cy67k7qmmn4rirs47-xnode-miniapp-template-1.0.0.drv'...
++error: builder for '/nix/store/a85wvfx6vlhf662cy67k7qmmn4rirs47-xnode-miniapp-template-1.0.0.drv' failed with exit code 1;
++last 25 log lines:
++> 5:10 Warning: 'isFrame' is assigned a value but never used. @typescript-eslint/no-unused-vars
++>
++> info - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
++> Failed to compile.
++>
++> ./components/context/miniapp-provider.tsx:53:19
++> Type error: Property 'login' does not exist on type '{ ready: (options?: Partial<ReadyOptions> | undefined) => Promise<void>; openUrl: (url: string | { url: string; }) => Promise<void>; close: () => Promise<...>; ... 11 more ...; requestCameraAndMicrophoneAccess: RequestCameraAndMicrophoneAccess; }'.
++>
++> 51 | if (context.isInMiniApp) {
++> 52 | // Trigger the pre‑auth flow if the SDK supports it
++> > 53 | sdk.actions.login().catch(console.error);
++> | ^
++> 54 | }
++> 55 | }, [context.isInMiniApp]);
++> 56 |
++> Next.js build worker exited with code: 1 and signal: null
++> .
++> ERROR: `npm build` failed
++>
++> Here are a few things you can try, depending on the error:
++> 1. Make sure your build script (build) exists
++> If there is none, set `dontNpmBuild = true`.
++> 2. If the error being thrown is something similar to "error:0308010C:digital envelope routines::unsupported", add `NODE_OPTIONS = "--openssl-legacy-provider"` to your derivation
++> See https://github.com/webpack/webpack/issues/14532 for more information.
++>
++For full logs, run:
++nix log /nix/store/a85wvfx6vlhf662cy67k7qmmn4rirs47-xnode-miniapp-template-1.0.0.drv
++error: 1 dependencies of derivation '/nix/store/vj32cx45c927xiwy2zbpbvjldhaik6sh-unit-xnode-miniapp-template.service.drv' failed to build
++error: 1 dependencies of derivation '/nix/store/r1kacvyxp3cqypp2s65483f0jh2rwa2i-system-units.drv' failed to build
++error: 1 dependencies of derivation '/nix/store/2n9aa0029rr33idy6051a2zwcj3wmcmz-etc.drv' failed to build
++error: 1 dependencies of derivation '/nix/store/smrnnnb7wly45yhc9pfg229jcsway4ih-nixos-system-tapquest-25.11.20250921.554be64.drv' failed to build
+
+# 2025-11-21 10:07:29.554836
++these 5 derivations will be built:
++/nix/store/a85wvfx6vlhf662cy67k7qmmn4rirs47-xnode-miniapp-template-1.0.0.drv
++/nix/store/vj32cx45c927xiwy2zbpbvjldhaik6sh-unit-xnode-miniapp-template.service.drv
++/nix/store/r1kacvyxp3cqypp2s65483f0jh2rwa2i-system-units.drv
++/nix/store/2n9aa0029rr33idy6051a2zwcj3wmcmz-etc.drv
++/nix/store/smrnnnb7wly45yhc9pfg229jcsway4ih-nixos-system-tapquest-25.11.20250921.554be64.drv
++building '/nix/store/a85wvfx6vlhf662cy67k7qmmn4rirs47-xnode-miniapp-template-1.0.0.drv'...
++error: builder for '/nix/store/a85wvfx6vlhf662cy67k7qmmn4rirs47-xnode-miniapp-template-1.0.0.drv' failed with exit code 1;
++last 25 log lines:
++> 5:10 Warning: 'isFrame' is assigned a value but never used. @typescript-eslint/no-unused-vars
++>
++> info - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
++> Failed to compile.
++>
++> ./components/context/miniapp-provider.tsx:53:19
++> Type error: Property 'login' does not exist on type '{ ready: (options?: Partial<ReadyOptions> | undefined) => Promise<void>; openUrl: (url: string | { url: string; }) => Promise<void>; close: () => Promise<...>; ... 11 more ...; requestCameraAndMicrophoneAccess: RequestCameraAndMicrophoneAccess; }'.
++>
++> 51 | if (context.isInMiniApp) {
++> 52 | // Trigger the pre‑auth flow if the SDK supports it
++> > 53 | sdk.actions.login().catch(console.error);
++> | ^
++> 54 | }
++> 55 | }, [context.isInMiniApp]);
++> 56 |
++> Next.js build worker exited with code: 1 and signal: null
++> .
++> ERROR: `npm build` failed
++>
++> Here are a few things you can try, depending on the error:
++> 1. Make sure your build script (build) exists
++> If there is none, set `dontNpmBuild = true`.
++> 2. If the error being thrown is something similar to "error:0308010C:digital envelope routines::unsupported", add `NODE_OPTIONS = "--openssl-legacy-provider"` to your derivation
++> See https://github.com/webpack/webpack/issues/14532 for more information.
++>
++For full logs, run:
++nix log /nix/store/a85wvfx6vlhf662cy67k7qmmn4rirs47-xnode-miniapp-template-1.0.0.drv
++error: 1 dependencies of derivation '/nix/store/vj32cx45c927xiwy2zbpbvjldhaik6sh-unit-xnode-miniapp-template.service.drv' failed to build
++error: 1 dependencies of derivation '/nix/store/r1kacvyxp3cqypp2s65483f0jh2rwa2i-system-units.drv' failed to build
++error: 1 dependencies of derivation '/nix/store/2n9aa0029rr33idy6051a2zwcj3wmcmz-etc.drv' failed to build
++error: 1 dependencies of derivation '/nix/store/smrnnnb7wly45yhc9pfg229jcsway4ih-nixos-system-tapquest-25.11.20250921.554be64.drv' failed to build
