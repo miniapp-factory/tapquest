@@ -3,6 +3,12 @@ import Home from "@/components/tap-quest/Home";
 
 export { generateMetadata };
 
+import { MiniAppProvider } from "@/components/context/miniapp-provider";
+
 export default function HomePage() {
-  return <Home />;
+  return (
+    <MiniAppProvider>
+      <Home />
+    </MiniAppProvider>
+  );
 }

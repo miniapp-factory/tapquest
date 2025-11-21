@@ -46,6 +46,14 @@ export function MiniAppProvider({ children }: { children: React.ReactNode }) {
     ready();
   }, []);
 
+  // Auto‑login when running inside a Farcaster Mini App
+  useEffect(() => {
+    if (context.isInMiniApp) {
+      // Trigger the pre‑auth flow if the SDK supports it
+      sdk.actions.login().catch(console.error);
+    }
+  }, [context.isInMiniApp]);
+
   return (
     <MiniAppContext.Provider value={context}>
       {children}
