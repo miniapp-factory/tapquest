@@ -260,3 +260,59 @@
 +		"type": "function"
 +	}
 +]
+
+# 2025-11-21 10:34:50.485121
++error:
++… while calling the 'head' builtin
++at /nix/store/yw0wijix50n0y2ii15sk8kvnwgalpq6f-source/lib/attrsets.nix:1701:13:
++1700| if length values == 1 || pred here (elemAt values 1) (head values) then
++1701| head values
++| ^
++1702| else
++… while evaluating the attribute 'value'
++at /nix/store/yw0wijix50n0y2ii15sk8kvnwgalpq6f-source/lib/modules.nix:1118:7:
++1117| // {
++1118| value = addErrorContext "while evaluating the option `${showOption loc}':" value;
++| ^
++1119| inherit (res.defsFinal') highestPrio;
++… while evaluating the option `system.build.toplevel':
++… while evaluating definitions from `/nix/store/yw0wijix50n0y2ii15sk8kvnwgalpq6f-source/nixos/modules/system/activation/top-level.nix':
++… while evaluating the option `warnings':
++… while evaluating definitions from `/nix/store/yw0wijix50n0y2ii15sk8kvnwgalpq6f-source/nixos/modules/system/boot/systemd.nix':
++… while evaluating the option `systemd.services.xnode-miniapp-template.serviceConfig':
++… while evaluating definitions from `/nix/store/yzz4a03bq6xligdsm5ap7ran00g5w075-source/nix/nixos-module.nix':
++(stack trace truncated; use '--show-trace' to show the full, detailed trace)
++error: attribute '"node_modules/ethers"' missing
++at /nix/store/yw0wijix50n0y2ii15sk8kvnwgalpq6f-source/pkgs/build-support/node/import-npm-lock/default.nix:140:18:
++139| mapPackageDependencies = mapAttrs (
++140| name: _: packageLock'.packages.${"node_modules/${name}"}.resolved
++| ^
++141| );
+
+# 2025-11-21 10:34:50.485525
++error:
++… while calling the 'head' builtin
++at /nix/store/yw0wijix50n0y2ii15sk8kvnwgalpq6f-source/lib/attrsets.nix:1701:13:
++1700| if length values == 1 || pred here (elemAt values 1) (head values) then
++1701| head values
++| ^
++1702| else
++… while evaluating the attribute 'value'
++at /nix/store/yw0wijix50n0y2ii15sk8kvnwgalpq6f-source/lib/modules.nix:1118:7:
++1117| // {
++1118| value = addErrorContext "while evaluating the option `${showOption loc}':" value;
++| ^
++1119| inherit (res.defsFinal') highestPrio;
++… while evaluating the option `system.build.toplevel':
++… while evaluating definitions from `/nix/store/yw0wijix50n0y2ii15sk8kvnwgalpq6f-source/nixos/modules/system/activation/top-level.nix':
++… while evaluating the option `warnings':
++… while evaluating definitions from `/nix/store/yw0wijix50n0y2ii15sk8kvnwgalpq6f-source/nixos/modules/system/boot/systemd.nix':
++… while evaluating the option `systemd.services.xnode-miniapp-template.serviceConfig':
++… while evaluating definitions from `/nix/store/yzz4a03bq6xligdsm5ap7ran00g5w075-source/nix/nixos-module.nix':
++(stack trace truncated; use '--show-trace' to show the full, detailed trace)
++error: attribute '"node_modules/ethers"' missing
++at /nix/store/yw0wijix50n0y2ii15sk8kvnwgalpq6f-source/pkgs/build-support/node/import-npm-lock/default.nix:140:18:
++139| mapPackageDependencies = mapAttrs (
++140| name: _: packageLock'.packages.${"node_modules/${name}"}.resolved
++| ^
++141| );
