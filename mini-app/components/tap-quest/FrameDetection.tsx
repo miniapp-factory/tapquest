@@ -1,12 +1,10 @@
 'use client';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function FrameDetection() {
-  const [isFrame, setIsFrame] = useState(false);
-
   useEffect(() => {
     const frame = (window as unknown as { frame?: { isFrame?: boolean } })?.frame;
-    setIsFrame(!!frame?.isFrame);
+    // Frame detection logic can be expanded here if needed
   }, []);
 
   return null;
