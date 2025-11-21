@@ -108,3 +108,155 @@
 +error: 1 dependencies of derivation '/nix/store/r1kacvyxp3cqypp2s65483f0jh2rwa2i-system-units.drv' failed to build
 +error: 1 dependencies of derivation '/nix/store/2n9aa0029rr33idy6051a2zwcj3wmcmz-etc.drv' failed to build
 +error: 1 dependencies of derivation '/nix/store/smrnnnb7wly45yhc9pfg229jcsway4ih-nixos-system-tapquest-25.11.20250921.554be64.drv' failed to build
+
+# 2025-11-21 10:24:56.551456
++i deployed contract address 0x5ad5c3c4ee871b8fc87efefa9eebf4c5ae7f6953
++ABI 
++[
++	{
++		"anonymous": false,
++		"inputs": [
++			{
++				"indexed": true,
++				"internalType": "address",
++				"name": "player",
++				"type": "address"
++			},
++			{
++				"indexed": false,
++				"internalType": "uint256",
++				"name": "newScore",
++				"type": "uint256"
++			}
++		],
++		"name": "ScoreSubmitted",
++		"type": "event"
++	},
++	{
++		"inputs": [
++			{
++				"internalType": "uint256",
++				"name": "score",
++				"type": "uint256"
++			}
++		],
++		"name": "submitScore",
++		"outputs": [],
++		"stateMutability": "nonpayable",
++		"type": "function"
++	},
++	{
++		"inputs": [
++			{
++				"internalType": "address",
++				"name": "",
++				"type": "address"
++			}
++		],
++		"name": "bestScore",
++		"outputs": [
++			{
++				"internalType": "uint256",
++				"name": "",
++				"type": "uint256"
++			}
++		],
++		"stateMutability": "view",
++		"type": "function"
++	},
++	{
++		"inputs": [
++			{
++				"internalType": "address[]",
++				"name": "players",
++				"type": "address[]"
++			}
++		],
++		"name": "getScores",
++		"outputs": [
++			{
++				"internalType": "uint256[]",
++				"name": "",
++				"type": "uint256[]"
++			}
++		],
++		"stateMutability": "view",
++		"type": "function"
++	}
++]
+
+# 2025-11-21 10:24:56.552084
++i deployed contract address 0x5ad5c3c4ee871b8fc87efefa9eebf4c5ae7f6953
++ABI 
++[
++	{
++		"anonymous": false,
++		"inputs": [
++			{
++				"indexed": true,
++				"internalType": "address",
++				"name": "player",
++				"type": "address"
++			},
++			{
++				"indexed": false,
++				"internalType": "uint256",
++				"name": "newScore",
++				"type": "uint256"
++			}
++		],
++		"name": "ScoreSubmitted",
++		"type": "event"
++	},
++	{
++		"inputs": [
++			{
++				"internalType": "uint256",
++				"name": "score",
++				"type": "uint256"
++			}
++		],
++		"name": "submitScore",
++		"outputs": [],
++		"stateMutability": "nonpayable",
++		"type": "function"
++	},
++	{
++		"inputs": [
++			{
++				"internalType": "address",
++				"name": "",
++				"type": "address"
++			}
++		],
++		"name": "bestScore",
++		"outputs": [
++			{
++				"internalType": "uint256",
++				"name": "",
++				"type": "uint256"
++			}
++		],
++		"stateMutability": "view",
++		"type": "function"
++	},
++	{
++		"inputs": [
++			{
++				"internalType": "address[]",
++				"name": "players",
++				"type": "address[]"
++			}
++		],
++		"name": "getScores",
++		"outputs": [
++			{
++				"internalType": "uint256[]",
++				"name": "",
++				"type": "uint256[]"
++			}
++		],
++		"stateMutability": "view",
++		"type": "function"
++	}
++]
